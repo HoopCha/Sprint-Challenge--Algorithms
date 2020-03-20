@@ -91,7 +91,21 @@ class SortingRobot:
         Returns True if the robot's light is on and False otherwise.
         """
         return self._light == "ON"
-
+    '''
+   def move_left_until_spot_is_found(self):
+        #While the robot can move left
+        while self.can_move_left() == True:
+            #Move Left
+            self.move_left()
+            #Check if what its holding is smaller that what its against
+            if self.compare_item() == -1 or self.compare_item() == 0 or self.compare_item() == None:
+                #If it is recursion this
+                self.move_left_until_spot_is_found()
+            elif self.compare_item() == 1:
+                self.swap_item()
+            #otherwise swap
+    '''
+            
     def sort(self):
         """
         Sort the robot's list.
@@ -127,6 +141,9 @@ class SortingRobot:
             while self.can_move_left() == True:
                 self.move_left()
 
+
+#Ideas for optimization
+#probably making it an insert sort instead
 
 if __name__ == "__main__":
     # Test our your implementation from the command line

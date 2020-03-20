@@ -49,8 +49,7 @@ class Test(unittest.TestCase):
     #     robot = SortingRobot(self.large_list)
     #     robot.sort()
     #     print(robot._time)
-    #     self.assertLess(robot._time, 27513)
-
+    #     self.assertLess(robot._time, 2751
     #     robot = SortingRobot(self.large_varied_list)
     #     robot.sort()
     #     print(robot._time)
